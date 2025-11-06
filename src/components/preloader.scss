@@ -1,0 +1,267 @@
+.anime {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .load {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeInUp 1s ease forwards, fadeOutUp 1s ease forwards 4s;
+        .title {
+            color: #14e956;
+            font-family: "ExoSpace";
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-align: center;
+            font-size: 10vw;
+            display: inline-block;
+            -webkit-text-stroke: 1px #14e956;
+            text-shadow: 0 0 10px rgba(20, 233, 86, 0.8), 0 0 28px rgba(20, 233, 86, 0.6), 0 0 42px rgba(20, 233, 86, 0.45);
+            animation: floatGlow 2.2s ease-in-out infinite;
+            @media (min-width: 480px) and (max-width: 759px) {
+                font-size: 14vw;
+            }
+            @media (max-width: 479px) {
+                font-size: 16vw;
+            }
+        }
+        /* New SVG wordmark */
+        .logo-svg {
+            width: 85%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .neon-word {
+            font-family: "ExoSpace", sans-serif;
+            font-weight: 900;
+            font-size: 140px;
+            letter-spacing: 6px;
+            fill: transparent;
+            stroke: #14e956;
+            stroke-width: 3px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            text-transform: uppercase;
+            /* stroke draw then fill */
+            stroke-dasharray: 1200;
+            stroke-dashoffset: 1200;
+            animation:
+                strokeDraw 2s ease forwards,
+                fillIn 0.6s ease forwards 2.1s,
+                glowPulseSoft 2.4s ease-in-out infinite 2.7s;
+        }
+        #lo {
+            // animation: fill 0.5s ease forwards 3.5s;
+            #roar {
+                #roar-one {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-two {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 0.2s, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-three {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 0.4s, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-four {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 0.6s, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-five {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 0.8s, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-six {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 1s, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-seven {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 1.2s, fill 0.5s ease forwards 3.5s;
+                }
+                #roar-eight {
+                    stroke-dasharray: 785;
+                    stroke-dashoffset: 785;
+                    animation: line-anim 1.5s ease forwards 1.2s, fill 0.5s ease forwards 3.5s;
+                }
+            }
+        }
+    }
+    .preload {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // animation: fadeInUp 10s ease forwards;
+        @media (min-width: 480px) and (max-width: 759px) {
+            background-size: contain;
+        }
+        @media (max-width: 479px) {
+            background-size: contain;
+        }
+        .loader {
+            width: 70vw !important;
+        }
+        .progress {
+            width: 70vw !important;
+            color: #14e956 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+    }
+}
+
+
+.css-eglki6-MuiLinearProgress-root {
+    height: 5px !important;
+    background-color: #e8fdee !important;
+    border-radius: 5px !important;
+    @media (min-width: 480px) and (max-width: 759px) {
+        height: 5px !important;
+    }
+    @media (max-width: 479px) {
+        height: 5px !important;
+    }
+}
+
+.css-5xe99f-MuiLinearProgress-bar1 {
+    background-color: #14e956 !important;
+}
+
+.css-1kjyx0o-MuiTypography-root {
+    margin-top: 2rem !important;
+    font-family: "ExoSpace" !important;
+    font-weight: 900 !important;
+    font-size: 2rem !important;
+    line-height: 1.43;
+    @media (min-width: 480px) and (max-width: 759px) {
+        font-size: 1.5rem !important;
+        line-height: 1.15 !important;
+    }
+    @media (max-width: 479px) {
+        font-size: 1.5rem !important;
+        line-height: 1 !important;
+    }
+}
+
+.css-7p5u54 {
+    height: 5px !important;
+    background-color: #e8fdee !important;
+    border-radius: 5px !important;
+    @media (min-width: 480px) and (max-width: 759px) {
+        height: 5px !important;
+    }
+    @media (max-width: 479px) {
+        height: 5px !important;
+    }
+}
+
+.css-t752vm {
+    background-color: #14e956 !important;
+}
+
+.css-16e5s8c {
+    margin-top: 2rem !important;
+    // font-family: "Cyborg" !important;
+    font-family: "ExoSpace" !important;
+    font-weight: 900 !important;
+    font-size: 2rem !important;
+    line-height: 1.43;
+    @media (min-width: 480px) and (max-width: 759px) {
+        font-size: 1.5rem !important;
+        line-height: 1.15 !important;
+    }
+    @media (max-width: 479px) {
+        font-size: 1.5rem !important;
+        line-height: 1 !important;
+    }
+}
+
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #14e956;
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes strokeDraw {
+    0% {
+        stroke-dashoffset: 1200;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillIn {
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: #14e956;
+    }
+}
+
+@keyframes floatGlow {
+    0% {
+      text-shadow: 0 0 8px rgba(20, 233, 86, 0.7), 0 0 24px rgba(20, 233, 86, 0.5), 0 0 36px rgba(20, 233, 86, 0.35);
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      text-shadow: 0 0 18px rgba(20, 233, 86, 1), 0 0 44px rgba(20, 233, 86, 0.85), 0 0 64px rgba(20, 233, 86, 0.65);
+      transform: translateY(-8px) scale(1.02);
+    }
+    100% {
+      text-shadow: 0 0 8px rgba(20, 233, 86, 0.7), 0 0 24px rgba(20, 233, 86, 0.5), 0 0 36px rgba(20, 233, 86, 0.35);
+      transform: translateY(0) scale(1);
+    }
+}
