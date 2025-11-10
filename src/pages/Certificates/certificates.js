@@ -30,8 +30,8 @@ export default function CertificatesPage() {
           </div>
           <h3 className="unit-title mt-6 mb-3">Prices</h3>
           <div className="grid-2 gap-3">
-            <a href="https://youtu.be/22wrlokwVyY" className="chip chip-yellow">Projext Expo Frist Price In College level</a>
-            <a href="https://youtu.be/PiAKLuhf-88" className="chip chip-yellow">Poster Making 2nd price in collge level</a>
+            <a href="https://drive.google.com/file/d/1bnNFab1M2Sk9GOO3vyRfDNdtQMqpZ82B/view?usp=sharing" className="chip chip-yellow">Projext Expo Frist Price In College level</a>
+            <a href="https://drive.google.com/file/d/1CU9ekgetL_w031pHfPC9IGD6TuXaqbPk/view?usp=sharing" className="chip chip-yellow">Poster Making 2nd price in collge level</a>
           </div>
           <h3 className="unit-title mt-6 mb-3">MS office</h3>
           <div className="grid-2 gap-3">

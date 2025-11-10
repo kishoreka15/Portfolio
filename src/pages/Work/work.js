@@ -28,8 +28,8 @@ function Work() {
                     <h4>SINCET VR LAB</h4>
                     <p><span>Problem:</span> Traditional engineering lab education often lacks immersive, interactive, and real-time guidance for students. <br/>
                     <span>Solution:</span> Designed and developed an immersive VR/AR learning platform with AI-powered virtual lab assistance to support engineering education, including real-time collaborative features and multi-department content.</p>
-                    <div class="button-wrap">
-                     <button class="button">Visit &rarr;</button>
+                    <div className="button-wrap">
+                     <a className="button" href="https://kishoreka15.github.io/SINCET-VR-LAB/" target="_blank" rel="noopener noreferrer">Visit &rarr;</a>
                      </div>
                 </div>
                 </div>
@@ -41,8 +41,8 @@ function Work() {
                    <h4>10th/12th students career recommendation</h4>
                     <p><span>Problem:</span> Students graduating from 10th/12th grade lack personalized, data-driven career guidance, often leading to decisions influenced by peer/parent pressure rather than their true aptitude, skills, and interests. <br/>
                     <span>Solution:</span> Developed a Machine Learning model (e.g., Random Forest or Decision Tree) that processes student academic scores, personality inputs, and interests to generate personalized career path recommendations, reducing confusion and improving decision-making accuracy.</p>
-                    <div class="button-wrap">
-                     <button class="button">Visit &rarr;</button>
+                    <div className="button-wrap">
+                     <a className="button" href="https://github.com/kishoreka15/students_guide" target="_blank" rel="noopener noreferrer">Visit &rarr;</a>
                      </div>
                 </div>
                 </div>
@@ -54,8 +54,8 @@ function Work() {
                     <h4>House Price Prediction</h4>
                     <p><span>Problem:</span> Consumers need fast and accurate valuation to make informed decisions when buying or selling property.<br/>
                     <span>Solution:</span> Developed a machine learning model to predict house prices using Scikit-learn, providing an accurate estimate with a simple HTML/CSS frontend for user input.</p>
-                    <div class="button-wrap">
-                     <button class="button">Visit &rarr;</button>
+                    <div className="button-wrap">
+                     <a className="button" href="https://github.com/kishoreka15/house-price-prediction" target="_blank" rel="noopener noreferrer">Visit &rarr;</a>
                      </div>
                 </div>
                 </div>
@@ -67,8 +67,8 @@ function Work() {
                     <h4>Real-Time Transcription</h4>
                      <p><span>Problem:</span>Live audio streams require instant and accurate text conversion for accessibility and documentation.<br/>
                     <span>Solution:</span>Developed a system for real-time audio-to-text transcription using Python and the SpeechRecognition library, with logic for handling continuous audio input.</p>
-                    <div class="button-wrap">
-                     <button class="button">Visit &rarr;</button>
+                    <div className="button-wrap">
+                     <a className="button" href="https://github.com/kishoreka15/realtime-transcription-in-live-stream" target="_blank" rel="noopener noreferrer">Visit &rarr;</a>
                      </div>
                 </div>
                 </div>
