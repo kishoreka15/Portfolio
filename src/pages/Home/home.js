@@ -7,16 +7,7 @@ import { gsap } from "gsap";
 import { useNavigate } from 'react-router-dom';
 
 import './home.scss'
-import { ReactComponent as ReactImg } from './../../assets/images/react.svg'
-import { ReactComponent as AngularImg } from './../../assets/images/angular.svg'
-import { ReactComponent as NodeImg } from './../../assets/images/node.svg'
-import { ReactComponent as MongoImg } from './../../assets/images/mongo.svg'
-import { ReactComponent as JavascriptImg } from './../../assets/images/javascript.svg'
-import { ReactComponent as FigmaImg } from './../../assets/images/figma.svg'
-import { ReactComponent as SassImg } from './../../assets/images/sass.svg'
-import { ReactComponent as TypescriptImg } from './../../assets/images/typescript.svg'
-import { ReactComponent as SolidityImg } from './../../assets/images/solidity.svg'
-import { ReactComponent as PolygonImg } from './../../assets/images/polygon.svg'
+ 
 import myImage from "../../assets/images/b3be3a3d7253c5e0d796574cae5a3391.jpg";
 import GeminiImage from '../../assets/images/Gemini_Generated_Image_oymqrloymqrloymq.png';
 import house from '../../assets/images/Utility Software_ Definition, Examples, and Benefits.jpg';
@@ -135,6 +126,87 @@ function Home() {
             setCerts([]);
         }
     }, []);
+
+    // Tooling section data and icon resolver
+    const tools = [
+        'Python',
+        'Matplotlib',
+        'Pandas',
+        'HTML/CSS',
+        'SQL',
+        'Data Analys',
+        'Power BI',
+        'ML',
+        'MS office',
+        'Numpy',
+    ];
+
+    const getIconSrc = (name) => {
+        // Map label keywords to expected svg/png filenames in assets/images
+        const map = {
+            python: 'python',
+            matplotlib: 'matplotlib',
+            pandas: 'pandas',
+            html: 'html',
+            css: 'css',
+            'html/css': 'html',
+            sql: 'sql',
+            analysis: 'analysis',
+            analys: 'Data analyer',
+            'data analys': 'Data analyer',
+            'power bi': 'Power bi',
+            powerbi: 'Power bi',
+            ml: 'ml',
+            'ms office': 'MS office',
+            office: 'MS office',
+            numpy: 'numpy',
+        };
+        const key = name.toLowerCase();
+        let base = map[key];
+        if (!base) {
+            if (key.includes('python')) base = 'python';
+            else if (key.includes('matplotlib')) base = 'matplotlib';
+            else if (key.includes('pandas')) base = 'pandas';
+            else if (key.includes('html')) base = 'html';
+            else if (key.includes('css')) base = 'css';
+            else if (key.includes('sql')) base = 'sql';
+            else if (key.includes('analys')) base = 'analysis';
+            else if (key.includes('power') && key.includes('bi')) base = 'powerbi';
+            else if (key === 'ml' || key.includes('machine')) base = 'ml';
+            else if (key.includes('office')) base = 'msoffice';
+            else if (key.includes('numpy')) base = 'numpy';
+        }
+        const images = require.context('../../assets/images', false, /\.(svg|png)$/);
+        const tryFile = (filename) => {
+            try {
+                return images(`./${filename}`);
+            } catch {
+                return null;
+            }
+        };
+        const properCase = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1).toLowerCase() : s;
+        const candidatesBase = [];
+        if (base) {
+            candidatesBase.push(base);
+            candidatesBase.push(base.toLowerCase());
+            candidatesBase.push(properCase(base));
+            candidatesBase.push(base.toUpperCase());
+        }
+        // Add known alias variants for existing files (ML.png, SQL.png, Numpy.png)
+        if (base === 'ml') candidatesBase.unshift('ML');
+        if (base === 'sql') candidatesBase.unshift('SQL');
+        if (base === 'numpy') candidatesBase.unshift('Numpy');
+        // Iterate candidates
+        for (const b of candidatesBase) {
+            const svg = tryFile(`${b}.svg`);
+            if (svg) return svg;
+            const png = tryFile(`${b}.png`);
+            if (png) return png;
+        }
+        // Default fallback
+        const fallback = tryFile('logo.svg') || tryFile('logo.png');
+        return fallback || '';
+    };
 
     return (
         <div className="home">
@@ -833,46 +905,14 @@ function Home() {
             <div className="tooling hidden">
                 <div className="tooling-title"><h2>Tooling</h2></div>
                 <div className="tooling-box">
-                <div className="box-content">
-                <div className="box-icon"><ReactImg className="icon" /></div>
-                <div className="box-text"><p>Python</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><AngularImg className="icon" /></div>
-                <div className="box-text"><p>Matplotlib</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><NodeImg className="icon" /></div>
-                <div className="box-text"><p>Pandas</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><MongoImg className="icon" /></div>
-                <div className="box-text"><p>HTML/CSS</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><JavascriptImg className="icon" /></div>
-                <div className="box-text"><p>SQL</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><FigmaImg className="icon" /></div>
-                <div className="box-text"><p>Data Analys</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><SassImg className="icon" /></div>
-                <div className="box-text"><p>Power BI</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><TypescriptImg className="icon" /></div>
-                <div className="box-text"><p>ML</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><SolidityImg className="icon" /></div>
-                <div className="box-text"><p>MS office</p></div>
-                </div>
-                <div className="box-content">
-                <div className="box-icon"><PolygonImg className="icon" /></div>
-                <div className="box-text"><p>Numpy</p></div>
-                </div>
+                    {tools.map((t) => (
+                        <div className="box-content" key={t}>
+                            <div className="box-icon">
+                                <img className="icon" src={getIconSrc(t)} alt={t} />
+                            </div>
+                            <div className="box-text"><p>{t}</p></div>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="showroom-section hidden">
