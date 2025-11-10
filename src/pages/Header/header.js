@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useState } from 'react';
-import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/Screenshot_2024-11-26_at_11.28.55_AM-removebg-preview-2.png';
@@ -10,44 +9,8 @@ import './header.scss';
 function Header() {
     const navigate = useNavigate();
     const elSocials = useRef();
-    const s = gsap.utils.selector(elSocials);
-    const tlMenu = useRef();
     const [checked, setChecked] = useState(false);
-
-
-    const animeOne = () => {
-        tlMenu.current = gsap.timeline()
-        .fromTo(s(".menu-one"), {x: -20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".menu-two"), {x: -20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".menu-three"), {x: -20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".menu-four"), {x: -20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".menu-five"), {x: -20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-    }
-    const animeTwo = () => {
-        tlMenu.current = gsap.timeline()
-        .fromTo(s(".github"), {x: 20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".linkedin"), {x: 20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".twitter"), {x: 20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-        .fromTo(s(".schedule"), {x: 20, opacity: 0}, {
-            x: 0, opacity: 1, duration: .7, ease: "powerIn", transformOrigin: 'center center', stagger: 0.1
-          })
-    }
+    
 
     // removed unused triggerAnime
 
