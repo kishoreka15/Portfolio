@@ -105,8 +105,9 @@ function Home() {
     const image = Data.find(data => data.id === background)?.img || Data[0]?.img;
 
     const nav = () => {
-        return navigate('/work'), window.location.reload();
-        
+        navigate('/work');
+        window.location.reload();
+        return;
       }
     
     const Styles = {
