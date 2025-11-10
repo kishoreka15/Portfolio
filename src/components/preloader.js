@@ -19,7 +19,7 @@ function LinearProgressWithLabel(props) {
       .to(q(".square"), {
         duration: 1.5, ease: "powerInOut", opacity: 1, repeat: -1, yoyo: true
       });
-      }, []);
+      }, [q]);
   return (
     <div className="preload">
       <div className="loader">
@@ -39,17 +39,6 @@ LinearProgressWithLabel.propTypes = {
 };
 
 export default function LinearWithValueLabel() {
-  const [progress, setProgress] = React.useState(10);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-    }, 500);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
   return (
     <Box>
       <div className="anime">

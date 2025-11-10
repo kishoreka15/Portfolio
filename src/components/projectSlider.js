@@ -75,7 +75,7 @@ const ProjectSlider = ({setBackground}) => {
               <a href={slide.link}>visit</a> */}
             {index === current && (
                 <>
-              <img src={slide.img} alt='project image' className='image' />
+              <img src={slide.img} alt="Project" className='image' />
               <div className='detail'>
                   <h4>{slide.title}</h4>
                   <p className='desc'>{slide.description}</p>

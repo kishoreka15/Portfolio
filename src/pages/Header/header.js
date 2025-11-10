@@ -9,11 +9,8 @@ import './header.scss';
 
 function Header() {
     const navigate = useNavigate();
-    const el = useRef();
     const elSocials = useRef();
-    // const q = gsap.utils.selector(el);
     const s = gsap.utils.selector(elSocials);
-    // const tl = useRef();
     const tlMenu = useRef();
     const [checked, setChecked] = useState(false);
 
@@ -52,15 +49,7 @@ function Header() {
           })
     }
 
-    const triggerAnime = () => {
-        if (checked) {
-            return animeOne(), animeTwo();
-        }
-        else if (!checked) {
-            return null
-        }
-        return null
-    }
+    // removed unused triggerAnime
 
     const check = () => {
         return setChecked(false)

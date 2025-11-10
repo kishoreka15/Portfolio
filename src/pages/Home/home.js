@@ -50,12 +50,6 @@ function Home() {
     const Illus = useRef();
     const i = gsap.utils.selector(Illus);
     const tlm = useRef();
-    const dlm = useRef();
-
-    // useEffect(() => {
-    //     dlm.current = gsap.timeline()
-    //     .fromTo(i(".c-tween"), {scale: 0.7}, {
-    //         scale: 1, repeat: -1, yoyo: true,
     //       })
     // });
 
@@ -69,7 +63,7 @@ function Home() {
           })
         .fromTo(i(".b-three"), {fill: "#1E2128", opacity: 0, scale: 0.7}, {
             fill: "#00CA4E", opacity: 1, scale: 1.3, duration: 1, ease: "none", transformOrigin: 'center center', stagger: 0.1, repeat: -1, yoyo: true
-          })
+          }) 
         .fromTo(i(".a-one"), {opacity: 0}, {
             opacity: 1, duration: 1, ease: "none", transformOrigin: 'center center', repeat: -1, yoyo: true
           })
@@ -97,7 +91,7 @@ function Home() {
         .fromTo(i(".a-nine"), {opacity: 0}, {
             opacity: 1, duration: 1, ease: "none", transformOrigin: 'center center', repeat: -1, yoyo: true
           })     
-    }, []);
+    }, [i]);
 
     const [background, setBackground] = useState(0);
     const [certs, setCerts] = useState([]);

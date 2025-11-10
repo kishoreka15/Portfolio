@@ -22,7 +22,7 @@ function Work() {
             <div className="projects">
                 <div className="single">
                 <div className="single-img">
-                    <img src={sincetvr1} alt="Sincetvr Project Image 1" />
+                    <img src={sincetvr1} alt="Project" />
                 </div>
                 <div className="single-detail">
                     <h4>SINCET VR LAB</h4>
@@ -35,7 +35,7 @@ function Work() {
                 </div>
                 <div className="single reverse">
                 <div className="single-img">
-                    <img src={student} alt="Sincetvr Project Image 1" />
+                    <img src={student} alt="Project" />
                 </div>
                 <div className="single-detail">
                    <h4>10th/12th students career recommendation</h4>
@@ -48,7 +48,7 @@ function Work() {
                 </div>
                 <div className="single">
                 <div className="single-img">
-                    <img src={house} alt="Sincetvr Project Image 1" />
+                    <img src={house} alt="Project" />
                 </div>
                 <div className="single-detail">
                     <h4>House Price Prediction</h4>
@@ -61,7 +61,7 @@ function Work() {
                 </div>
                 <div className="single reverse">
                 <div className="single-img">
-                    <img src={real} alt="Sincetvr Project Image 1" />
+                    <img src={real} alt="Project" />
                 </div>
                 <div className="single-detail">
                     <h4>Real-Time Transcription</h4>
